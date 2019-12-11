@@ -34,13 +34,12 @@ foreach ($total as $row) {
 		?>
 		<label for="Python"><?php echo $nombre . ": " . $cantidad ?></label>
 		<div class="progress">
-			<div class="progress-bar progress-bar-striped" role="progressbar" name='<?php echo $nombre; ?>' style="width: <?php echo $cantidad / $canTotal * 100; ?>%" aria-valuenow="<?php echo $cantidad; ?>" aria-valuemin="0" aria-valuemax="100"></div>
+			<div class="progress-bar progress-bar-striped" role="progressbar" name='<?php echo $nombre; ?>' style='width: <?php echo $cantidad / $canTotal * 100 . '%'; ?>' aria-valuenow="<?php echo $cantidad; ?>" aria-valuemin="0" aria-valuemax="100"></div>
 		</div>
 	<?php
 	}
 	?>
 </div>
-
 <?php
 include '_footer.php';
 ?>

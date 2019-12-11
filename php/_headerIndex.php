@@ -24,9 +24,6 @@
 
   <!-- Main Stylesheet File -->
   <link href="css/style.css" rel="stylesheet">
-
-
-
 </head>
 
 <body>
@@ -68,7 +65,6 @@
               <li><a href="login.php">INICIAR SESSION</a></li>
             <?php
             } ?>
-          </ul>
       </nav><!-- #nav-menu-container -->
     </div>
   </header><!-- #header -->

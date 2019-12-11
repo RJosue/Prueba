@@ -3,8 +3,20 @@ $titulo = "Lista de Estudiantes";
 include '_header.php';
 include 'conexion.php';
 include 'validar.php';
-$idCurso = $_GET['idCurso'];
-// select u.id, u.nombre, u.apellido, u.cedula from usuarios u inner join usuarios_capacitaciones uc on u.id = id_usuario inner join capacitaciones c on c.id = uc.id_capacitacion where uc.id_capacitacion = 5;
+
+$idDelCurso = $_GET['idCurso'];
+// Store the cipher method 
+$ciphering = "AES-256-CTR";
+$options = 0;
+// Use OpenSSl Encryption method 
+$iv_length = openssl_cipher_iv_length($ciphering);
+$decryption_iv = '0234789057295120';
+
+// Store the decryption key 
+$decryption_key = ",flmk.dnf2!#%/.";
+
+// Use openssl_decrypt() function to decrypt the data 
+$idCurso = openssl_decrypt($idDelCurso, $ciphering, $decryption_key, $options, $decryption_iv);
 
 ?>
 <div class="container shadow">
@@ -39,12 +51,12 @@ $idCurso = $_GET['idCurso'];
         </tr>
       </thead>
       <?php
-      $stmt = $conexion->prepare("select u.id, u.nombre, u.apellido, u.cedula from usuarios u inner join usuarios_capacitaciones uc on u.id = id_usuario inner join capacitaciones c on c.id = uc.id_capacitacion where uc.id_capacitacion = ? and c.id_profesor != u.id;");
-      $stmt->execute([$idCurso]);
+      $stmt = $conexion->prepare("select u.id, u.nombre, u.apellido, u.cedula from usuarios u inner join usuarios_capacitaciones uc on u.id = id_usuario inner join capacitaciones c on c.id = uc.id_capacitacion where uc.id_capacitacion = ? and c.id_profesor = ?;
+            ");
+      $stmt->execute([$idCurso, $_SESSION['id']]);
       $est = $stmt->fetchAll();
       $cont = 1;
       foreach ($est as $row) {
-        // echo $row['nombre']." ".$row['apellido'];
         ?>
         <tbody>
           <tr>
@@ -58,34 +70,6 @@ $idCurso = $_GET['idCurso'];
         $cont++;
       }
       ?>
-      <!-- <thead class="thead-dark">
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">Nombre del Estudiante</th>
-        <th scope="col">Cedula</th>
-        <th scope="col"><input type="checkbox" name="estudiante" onchange="checkAll(this)"></th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr id="row_1">
-        <th>1</th>
-        <td>Ernesto</td>
-        <td>8-246-1234</td>
-        <td><input type="checkbox" name="estudiante[]" value="1"></td>
-      </tr>
-      <tr id="row_2">
-        <th>2</th>
-        <td>Chan</td>
-        <td>8-246-1234</td>
-        <td><input type="checkbox" name="estudiante[]" value="1"></td>
-      </tr>
-      <tr id="row_3">
-        <th>3</th>
-        <td>Ernesto</td>
-        <td>8-246-1234</td>
-        <td><input type="checkbox" name="estudiante[]" value="1"></td>
-      </tr>
-    </tbody> -->
     </table>
     <button type="submit" name="btnCertificar" class="btn btn-secondary float-right ml-1">Certificar Estudiantes</button>
     <button type="submit" name="btnListar" class="btn btn-secondary float-right">Imprimir Lista</button>
