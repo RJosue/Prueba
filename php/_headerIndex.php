@@ -58,31 +58,24 @@
             <li><a href="php/gestioncursos.php">Gestion de Curso</a></li>
             <li><a href="php/horario.php">Horario</a></li>
             <li><a href="php/sugerencia.php">Sugerencias</a></li>
-            <?php session_start(); 
-              if(isset($_SESSION['nombre'])){?>
-                <li><a href="php/salirIndex.php">CERRAR SESSION</a></li>
-              <?php
-              }else{ ?>
             <li class="dropdown ">
               <!--  LOGIN MODAL TEST-->
-              <a href="">INICIAR SESION</a>
+              <p id="btnIniciar">INICIAR SESION</p>
               <div id="content-login" class="dropdown-content">
                 <h4>INICIAR SESION</h4>
                 <div class="form-group">
-                  <form action="php/autentificacion.php" method="POST">
+                  <form>
                     <div class="form-group my-2">
-                      <input type="text" name="user" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="  Cedula">
+                      <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="  Cedula">
                     </div>
                     <div class="form-group my-2">
-                      <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="  Contraseña">
+                      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="  Contraseña">
                     </div>
                     <button type="submit" class="btn btn-primary">INGRESAR</button>
                   </form>
                 </div>
               </div>
-            </li> 
-            <?php    
-            }?>    
+            </li>         
           </ul>
       </nav><!-- #nav-menu-container -->
     </div>

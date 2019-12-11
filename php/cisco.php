@@ -9,6 +9,7 @@ include '_header.php';
         <div class="card-body">
             <p><h2>Descripción de la academia CISCO</h2></p>
             <p>Los cursos de Networking Academy están diseñados para ayudar a los alumnos a prepararse para oportunidades profesionales básicas y avanzadas, formación continua y obtener certificaciones reconocidas a nivel mundial. Los cursos están respaldados por contenido en línea, clases presenciales, evaluaciones y quices online, laboratorios y actividades prácticas, y herramientas de aprendizaje interactivas para ayudar a los alumnos a desarrollar el conocimiento y habilidades necesarias para interactuar en campos relacionados con redes y nuevas tecnologías de información (TICs).</p>
+             <br>
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalScrollable">
                 Ver más información
             </button>
@@ -21,6 +22,7 @@ include '_header.php';
             <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalScrollableTitle">Información General</h5>
+                <br>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
                 </button>
@@ -62,14 +64,14 @@ include '_header.php';
                 <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, repellat animi. Fugit, ratione! Consequatur vero distinctio libero perspiciatis accusamus. </p>
             </div>
             <ul class="list-group list-group-flush">
-                <li class="list-group-item">CCNA Routing and Switching
+                <li class="list-group-item">CCNA Routing and Switching <br>
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong1">
-                        INSCRIBIRSE
+                        Pagar
                         </button>
                 </li>
-                <li class="list-group-item">Networking Essentials
+                <li class="list-group-item">Networking Essentials<br>
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong1">
-                        INSCRIBIRSE
+                        Pagar
                         </button>           
                 </li>
             </ul>
@@ -82,19 +84,19 @@ include '_header.php';
                 <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, repellat animi. Fugit, ratione! Consequatur vero distinctio libero perspiciatis accusamus.</p>
             </div>
             <ul class="list-group list-group-flush">
-                <li class="list-group-item">CCNP Routing and Switching
+                <li class="list-group-item">CCNP Routing and Switching<br>
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong1">
-                        INSCRIBIRSE
+                        Pagar
                         </button>
                 </li>
-                <li class="list-group-item">Switching
+                <li class="list-group-item">Switching<br>
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong1">
-                        INSCRIBIRSE
+                        Pagar
                         </button>          
                 </li>
-                <li class="list-group-item">Troubleshooting
+                <li class="list-group-item">Troubleshooting <br>
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong1">
-                        INSCRIBIRSE
+                        Pagar
                         </button>        
             </li>
             </ul>
@@ -106,24 +108,24 @@ include '_header.php';
                 <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, repellat animi. Fugit, ratione! Consequatur vero distinctio libero perspiciatis accusamus.</p>
             </div>
             <ul class="list-group list-group-flush">
-                <li class="list-group-item">Introducción a la Ciberseguridad
+                <li class="list-group-item">Introducción a la Ciberseguridad<br>
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong1">
-                        INSCRIBIRSE
+                        Pagar
                         </button>
                 </li>
-                <li class="list-group-item">Fundamentos de Ciberseguridad
+                <li class="list-group-item">Fundamentos de Ciberseguridad<br>
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong1">
-                        INSCRIBIRSE
+                        Pagar
                         </button>         
                 </li>
-                <li class="list-group-item">Cibersecurity Operations
+                <li class="list-group-item">Cibersecurity Operations<br>
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong1">
-                        INSCRIBIRSE
+                        Pagar
                         </button>           
                 </li>
-                <li class="list-group-item">CCNA Security
-                        <<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong1">
-                        INSCRIBIRSE
+                <li class="list-group-item">CCNA Security <br>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong1">
+                        Pagar
                         </button>           
                 </li>
             </ul>
@@ -138,24 +140,24 @@ include '_header.php';
                 <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, repellat animi. Fugit, ratione! Consequatur vero distinctio libero perspiciatis accusamus. </p>
             </div>
             <ul class="list-group list-group-flush">
-                <li class="list-group-item">Linux Unhatched
+                <li class="list-group-item">Linux Unhatched<br>
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong1">
-                        INSCRIBIRSE
+                        Pagar
                         </button>
                 </li>
-                <li class="list-group-item"> Linux Essentials
+                <li class="list-group-item"> Linux Essentials<br>
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong1">
-                        INSCRIBIRSE
+                        Pagar
                         </button>          
                 </li>
-                <li class="list-group-item"> Linux I
+                <li class="list-group-item"> Linux I<br>
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong1">
-                        INSCRIBIRSE
+                        Pagar
                         </button>          
                 </li>
-                <li class="list-group-item"> Linux II
+                <li class="list-group-item"> Linux II<br>
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong1">
-                        INSCRIBIRSE
+                        Pagar
                         </button>           
                 </li>
             </ul>
@@ -168,17 +170,17 @@ include '_header.php';
                 <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, repellat animi. Fugit, ratione! Consequatur vero distinctio libero perspiciatis accusamus.</p>
             </div>
             <ul class="list-group list-group-flush">
-                <li class="list-group-item">IT Essentials (Hardware & Software)
+                <li class="list-group-item">IT Essentials (Hardware & Software)<br>
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong1">
-                        INSCRIBIRSE
+                        Pagar
                         </button>                </li>
-                <li class="list-group-item">Get Conected
+                <li class="list-group-item">Get Conected<br>
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong1">
-                        INSCRIBIRSE
+                        Pagar
                         </button>                </li>
-                <li class="list-group-item">Internet de las Cosas
+                <li class="list-group-item">Internet de las Cosas<br>
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong1">
-                        INSCRIBIRSE
+                        Pagar
                         </button>                </li>
             </ul>
         </div>
@@ -189,13 +191,13 @@ include '_header.php';
                 <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, repellat animi. Fugit, ratione! Consequatur vero distinctio libero perspiciatis accusamus.</p>
             </div>
             <ul class="list-group list-group-flush">
-                <li class="list-group-item">Sea su propio Jefe
+                <li class="list-group-item">Sea su propio Jefe<br>
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong1">
-                        INSCRIBIRSE
-                        </button>                </li>
-                <li class="list-group-item">Emprendimiento
+                        Pagar
+                        </button></li>
+                <li class="list-group-item">Emprendimiento <br>
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong1">
-                        INSCRIBIRSE
+                        Pagar
                         </button>
                 </li>
             </ul>
@@ -260,7 +262,7 @@ include '_header.php';
           
         </div>
           <!-- BOTON DE PAGO -->
-          <button type="buttons" class="btn btn-secondary">INSCRIBIRSE</button>
+          <button type="buttons" class="btn btn-secondary">PAGAR</button>
       </div>
     </div>
   </div>

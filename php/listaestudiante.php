@@ -1,11 +1,6 @@
 <?php
 $titulo = "Lista de Estudiantes";
 include '_header.php'; 
-include 'conexion.php';
-include 'validar.php';
-$idCurso = $_GET['idCurso'];
-// select u.id, u.nombre, u.apellido, u.cedula from usuarios u inner join usuarios_capacitaciones uc on u.id = id_usuario inner join capacitaciones c on c.id = uc.id_capacitacion where uc.id_capacitacion = 5;
-
 ?>
 <div class="container shadow">
   <style type="text/css">
@@ -21,44 +16,12 @@ $idCurso = $_GET['idCurso'];
     }
   </style>
   <br>
-
     <div class="alert alert-warning alert-dismissible" role="alert">
             <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
             Luego de haber culminado el curso debe se le habilitara el boton de Certificar, que automaticamente enviara el certificado en formato pdf a los correos registrados dentro del sistema segun los estudiantes seleccionados mediante el checkbox.
         </div>
-  <form action="../lib/certificado/certificar.php" method="post">
-  <input type="hidden" name="curso" value="<?php echo $idCurso ?>">
   <table class="table">
-  <thead class="thead-dark">
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">Nombre del Estudiante</th>
-        <th scope="col">Cedula</th>
-        <th scope="col"><input type="checkbox" name="estudiante" onchange="checkAll(this)"></th>
-      </tr>
-    </thead>
-  <?php 
-    				$stmt = $conexion->prepare("select u.id, u.nombre, u.apellido, u.cedula from usuarios u inner join usuarios_capacitaciones uc on u.id = id_usuario inner join capacitaciones c on c.id = uc.id_capacitacion where uc.id_capacitacion = ?;
-            ");
-            $stmt->execute([$idCurso]); 
-            $est = $stmt->fetchAll();
-            $cont = 1;
-            foreach ($est as $row) {
-                // echo $row['nombre']." ".$row['apellido'];
-                ?>
-                <tbody>
-                <tr>
-                  <th><?php echo $cont; ?></th>
-                  <td><?php echo $row['nombre']." ".$row['apellido']; ?></td>
-                  <td><?php echo $row['cedula']; ?></td>
-                  <td><input type="checkbox" name="estudiante[]" value="<?php echo $row['id']; ?>"></td>
-                </tr>
-              </tbody>
-                <?php
-                $cont++;
-              }
-  ?>
-    <!-- <thead class="thead-dark">
+    <thead class="thead-dark">
       <tr>
         <th scope="col">#</th>
         <th scope="col">Nombre del Estudiante</th>
@@ -71,26 +34,25 @@ $idCurso = $_GET['idCurso'];
         <th>1</th>
         <td>Ernesto</td>
         <td>8-246-1234</td>
-        <td><input type="checkbox" name="estudiante[]" value="1"></td>
+        <td><input type="checkbox" name="estudiante[]"></td>
       </tr>
       <tr id="row_2">
         <th>2</th>
         <td>Chan</td>
         <td>8-246-1234</td>
-        <td><input type="checkbox" name="estudiante[]" value="1"></td>
+        <td><input type="checkbox" name="estudiante[]"></td>
       </tr>
       <tr id="row_3">
         <th>3</th>
         <td>Ernesto</td>
         <td>8-246-1234</td>
-        <td><input type="checkbox" name="estudiante[]" value="1"></td>
+        <td><input type="checkbox" name="estudiante[]"></td>
       </tr>
-    </tbody> -->
+    </tbody>
   </table>
-    <button type="submit" name="btnCertificar" class="btn btn-secondary float-right ml-1">Certificar Estudiantes</button>
-    <button type="submit" name="btnListar" class="btn btn-secondary float-right">Imprimir Lista</button>
+    <button class="btn btn-secondary float-right ml-1"><a href="../lib/certificado/certificar.php" target="_blank">Certificar Estudiantes</a></button>
+    <button class="btn btn-secondary float-right"><a href="">Imprimir Lista</a></button>
     <br>
-    </form>
   <script type='text/javascript'>
 
   // Set check or unchecked all checkboxes
