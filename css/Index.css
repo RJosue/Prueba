@@ -15,3 +15,7 @@ h1 .card-img-overlay{
 .card-body1{
     padding: 0.5rem;
 }
+#hhh:hover {
+    transform:scale(1.05);
+    box-shadow: 0px 8px 16px 0px  rgba(104,26,93, 0.9);
+  }
