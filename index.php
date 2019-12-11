@@ -3,8 +3,8 @@
 $titulo = "Educacion Continua";
 include 'php/_headerIndex.php'; ?>
 
-<link rel="stylesheet" type="text/css" href="css/Index.css">
 <link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/Index.css">
 <link href="../lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
 <!--==========================  <a href="#about" class="btn-get-started">Get Started</a>
