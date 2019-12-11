@@ -35,7 +35,6 @@
   Header
   ============================-->
   <header id="header">
-
     <div class="container">
       <nav id="nav-menu-container">
         <div id="logo" class="pull-left">
@@ -48,17 +47,20 @@
                 <li><a href="php/techacademy.php">Tech Academy</a></li>
               </ul>
             </li>
-            <li class="menu-has-children"><a href="">Administracion</a>
+            <?php  session_start(); 
+            if($_SESSION['id_rol'] == 1){?>
+              <li class="menu-has-children"><a href="">Administracion</a>
               <ul>
                 <li><a href="php/agregarcurso.php">Agregar Curso</a></li>
                 <li><a href="php/roles.php">Administrar Roles</a></li>
                 <li><a href="php/estadisticas.php">Estadisticas</a></li>
               </ul>
             </li>
-            <li><a href="php/gestioncursos.php">Gestion de Curso</a></li>
+            <?php }?> 
+            <?php if($_SESSION['id_rol'] == 2){?><li><a href="php/gestioncursos.php">Gestion de Curso</a></li><?php }?>
             <li><a href="php/horario.php">Horario</a></li>
             <li><a href="php/sugerencia.php">Sugerencias</a></li>
-            <?php session_start(); 
+            <?php 
               if(isset($_SESSION['nombre'])){?>
                 <li><a href="php/salirIndex.php">CERRAR SESSION</a></li>
               <?php

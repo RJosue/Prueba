@@ -25,6 +25,11 @@
   <!-- Main Stylesheet File -->
   <link href="../css/style.css" rel="stylesheet">
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://code.highcharts.com/highcharts.src.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script> 
+
+
 </head>
 
 <body>
@@ -51,17 +56,20 @@
             <li><a href="techacademy.php">Tech Academy</a></li> 
           </ul>
           </li>
-          <li class="menu-has-children"><a href="#">Administracion</a>
-          <ul>
-            <li><a href="agregarcurso.php">Agregar Curso</a></li>
-            <li><a href="roles.php">Administrar Roles</a></li>
-            <li><a href="estadisticas.php">Estadisticas</a></li>
-          </ul>
-          </li>
-          <li><a href="gestioncursos.php">Gestion de Curso</a></li>
+          <?php  session_start(); 
+            if($_SESSION['id_rol'] == 1){?>
+              <li class="menu-has-children"><a href="">Administracion</a>
+              <ul>
+                <li><a href="agregarcurso.php">Agregar Curso</a></li>
+                <li><a href="roles.php">Administrar Roles</a></li>
+                <li><a href="estadisticas.php">Estadisticas</a></li>
+              </ul>
+            </li>
+            <?php }?> 
+            <?php if($_SESSION['id_rol'] == 2){?><li><a href="gestioncursos.php">Gestion de Curso</a></li><?php }?>
           <li><a href="horario.php">Horario</a></li>
           <li><a href="sugerencia.php">Sugerencias</a></li>
-          <?php session_start(); 
+          <?php
           if(isset($_SESSION['nombre'])){?>
             <li><a href="salir.php">CERRAR SESSION</a></li>
           <?php

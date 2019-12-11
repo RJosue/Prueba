@@ -3,7 +3,22 @@ $titulo = "Lista de Estudiantes";
 include '_header.php'; 
 include 'conexion.php';
 include 'validar.php';
-$idCurso = $_GET['idCurso'];
+
+$idDelCurso = $_GET['idCurso'];
+ // Store the cipher method 
+ $ciphering = "AES-256-CTR"; 
+$options = 0;
+ // Use OpenSSl Encryption method 
+ $iv_length = openssl_cipher_iv_length($ciphering); 
+$decryption_iv = '0234789057295120'; 
+  
+// Store the decryption key 
+$decryption_key = ",flmk.dnf2!#%/."; 
+  
+// Use openssl_decrypt() function to decrypt the data 
+$idCurso= openssl_decrypt ($idDelCurso, $ciphering, $decryption_key, $options, $decryption_iv); 
+        
+echo $idCurso;
 // select u.id, u.nombre, u.apellido, u.cedula from usuarios u inner join usuarios_capacitaciones uc on u.id = id_usuario inner join capacitaciones c on c.id = uc.id_capacitacion where uc.id_capacitacion = 5;
 
 ?>
@@ -38,9 +53,9 @@ $idCurso = $_GET['idCurso'];
       </tr>
     </thead>
   <?php 
-    				$stmt = $conexion->prepare("select u.id, u.nombre, u.apellido, u.cedula from usuarios u inner join usuarios_capacitaciones uc on u.id = id_usuario inner join capacitaciones c on c.id = uc.id_capacitacion where uc.id_capacitacion = ?;
+    				$stmt = $conexion->prepare("select u.id, u.nombre, u.apellido, u.cedula from usuarios u inner join usuarios_capacitaciones uc on u.id = id_usuario inner join capacitaciones c on c.id = uc.id_capacitacion where uc.id_capacitacion = ? and c.id_profesor = ?;
             ");
-            $stmt->execute([$idCurso]); 
+            $stmt->execute([$idCurso,$_SESSION['id']]); 
             $est = $stmt->fetchAll();
             $cont = 1;
             foreach ($est as $row) {
