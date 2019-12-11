@@ -5,7 +5,7 @@ if(isset($_POST['submit'])){
     $apellido = $_POST['apellido'];
     $cedula = $_POST['cedula'];
     $correo = $_POST['correo'];
-    $pass = $_POST['password'];
+    $pass = md5($_POST['password']);
     $genero = $_POST['genero'];
     $celular = $_POST['celular'];
     $fechaNacimiento = $_POST['fechanacimiento'];
@@ -26,4 +26,3 @@ if(isset($_POST['submit'])){
 }else{
     header("Location: ../index.php");
 }
-?>

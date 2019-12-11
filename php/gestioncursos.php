@@ -1,6 +1,9 @@
 <?php
 $titulo = "Gestion de Cursos";
 include '_header.php'; 
+include 'conexion.php';
+include 'validar.php';
+
 ?>
 
 <div class="container shadow">
@@ -18,23 +21,8 @@ include '_header.php';
           $cont = 0;
           foreach ($curso as $row) {
             $collapse = "collapse".$cont;
-            $idCurso = $row['id'];
-            // Store the cipher method 
-            $ciphering = "AES-256-CTR"; 
-              
-            // Use OpenSSl Encryption method 
-            $iv_length = openssl_cipher_iv_length($ciphering); 
-            $options = 0; 
-              
-            // Non-NULL Initialization Vector for encryption 
-            $encryption_iv = '0234789057295120'; 
-              
-            // Store the encryption key 
-            $encryption_key = ",flmk.dnf2!#%/."; 
-              
-            // Use openssl_encrypt() function to encrypt the data 
-            $encryption = openssl_encrypt($idCurso, $ciphering, 
-            $encryption_key, $options, $encryption_iv);
+            // echo $id;
+            // echo $row['nombre']." ".$row['descripcion'];
             ?>
             <div class="card">
               <div class="card-header" id="headingOne">
@@ -48,7 +36,7 @@ include '_header.php';
               <div id="<?php echo $collapse; ?>" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
                 <div class="card-body">
                 <?php echo $row['descripcion'] ?>
-                  <br><button class="btn btn-secondary m-2 float-right"><a href="listaestudiante.php?idCurso=<?php echo $encryption;?>">Ver Estudiantes</a></button>
+                  <br><button class="btn btn-secondary m-2 float-right"><a href="listaestudiante.php?idCurso=<?php echo $row['id']?>">Ver Estudiantes</a></button>
                 </div>
               </div>
             </div>
@@ -105,7 +93,7 @@ include '_header.php';
       </div>
     </div>
   </div>
-</div>
+</div>-->
 </div>
 
 

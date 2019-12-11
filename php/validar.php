@@ -1,7 +1,7 @@
 <?php
 // verifica si la sesion existe
-    if (!isset($_SESSION['nombre'])){ 
-        header('Location: login.php');
+    if (!isset($_SESSION["nombre"])){ 
+        echo "<script>window.location='login.php';</script>";
     }
 
 ?>

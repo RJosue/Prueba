@@ -5,6 +5,7 @@
 
 <head>
 	<title>Login</title>
+	<link href="../img/favicon.png" rel="icon">
 	<!--Made with love by Mutiullah Samim -->
 
 	<!--Bootsrap 4 CDN-->
@@ -26,7 +27,7 @@
 		html,
 		body {
 			background-image: url('../img/fachada_utp.jpg');
-			background-color white;
+			background-color: white;
 			background-size: cover;
 			background-repeat: no-repeat;
 			height: 100%;

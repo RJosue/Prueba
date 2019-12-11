@@ -1,0 +1,19 @@
+ .tabla {
+    text-align: justify;
+    min-height: 50vh;
+    font-family: Roboto, Arial;
+    color: gray;
+    justify-content: center;
+    align-items: center;
+  }
+
+  td {
+    text-align: center;
+  }
+
+  .page-item.active .page-link {
+    z-index: 1;
+    color: #fff;
+    background-color: rgba(104,26,93, 0.9);
+    border-color: rgba(104,26,93, 0.9);
+}
