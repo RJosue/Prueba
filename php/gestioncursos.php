@@ -1,9 +1,6 @@
 <?php
 $titulo = "Gestion de Cursos";
 include '_header.php'; 
-include 'conexion.php';
-include 'validar.php';
-
 ?>
 
 <div class="container shadow">
@@ -108,7 +105,7 @@ include 'validar.php';
       </div>
     </div>
   </div>
-</div>-->
+</div>
 </div>
 
 

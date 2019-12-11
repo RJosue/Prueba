@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title><?php echo $titulo ?></title>
@@ -26,9 +26,8 @@
   <link href="../css/style.css" rel="stylesheet">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="https://code.highcharts.com/highcharts.src.js"></script>
-<script src="https://code.highcharts.com/modules/exporting.js"></script> 
-
+  <script src="https://code.highcharts.com/highcharts.src.js"></script>
+  <script src="https://code.highcharts.com/modules/exporting.js"></script>
 
 </head>
 
@@ -41,7 +40,7 @@
     <div class="container">
 
       <div id="logo" class="pull-left">
-        
+
         <!-- Uncomment below if you prefer to use a text logo -->
         <!--<h1><a href="#hero">Regna</a></h1>-->
       </div>
@@ -50,49 +49,32 @@
         <ul class="nav-menu">
           <li class=""><a href="../index.php">Inicio</a></li>
           <li class="menu-has-children"><a href="#about">Capacitaciones</a>
-          <ul>
-            <li><a href="diplomados.php">Diplomados</a></li>
-            <li><a href="cisco.php">Cisco</a></li>
-            <li><a href="techacademy.php">Tech Academy</a></li> 
-          </ul>
+            <ul>
+              <li><a href="diplomados.php">Diplomados</a></li>
+              <li><a href="cisco.php">Cisco</a></li>
+              <li><a href="techacademy.php">Tech Academy</a></li>
+            </ul>
           </li>
-          <?php  session_start(); 
-            if($_SESSION['id_rol'] == 1){?>
-              <li class="menu-has-children"><a href="">Administracion</a>
+          <?php session_start();
+          if ($_SESSION['id_rol'] == 1) { ?>
+            <li class="menu-has-children"><a href="">Administracion</a>
               <ul>
                 <li><a href="agregarcurso.php">Agregar Curso</a></li>
                 <li><a href="roles.php">Administrar Roles</a></li>
                 <li><a href="estadisticas.php">Estadisticas</a></li>
               </ul>
             </li>
-            <?php }?> 
-            <?php if($_SESSION['id_rol'] == 2){?><li><a href="gestioncursos.php">Gestion de Curso</a></li><?php }?>
+          <?php } ?>
+          <?php if ($_SESSION['id_rol'] == 2) { ?><li><a href="gestioncursos.php">Gestion de Curso</a></li><?php } ?>
           <li><a href="horario.php">Horario</a></li>
           <li><a href="sugerencia.php">Sugerencias</a></li>
           <?php
-          if(isset($_SESSION['nombre'])){?>
-            <li><a href="salir.php">CERRAR SESSION</a></li>
+          if (isset($_SESSION['nombre'])) { ?>
+            <li><a href="php/salir.php">CERRAR SESSION</a></li>
           <?php
-          }else{ ?>
-          <li class="dropdown">  <!--  LOGIN MODAL TEST-->
-            <a href="">INICIAR SESION</a>
-            <div class="dropdown-content">            
-              <h4>INICIAR SESION</h4>
-              <div  class="form-group">
-              <form action="autentificacion.php" method="POST">
-              <div class="form-group my-2">
-                <input type="text" name="user" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="  Cedula">
-              </div>
-              <div class="form-group my-2">
-                <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="  Contraseña">
-              </div>
-              <button type="submit" class="btn btn-primary">INGRESAR</button>
-                </form>
-              </div>
-            </div>
-          </li>
-          <?php
-          }?>
+          } else { ?>
+            <li><a href="php/login.php">INICIAR SESSION</a></li>
+          <?php } ?>
         </ul>
       </nav><!-- #nav-menu-container -->
     </div>

@@ -47,44 +47,26 @@
                 <li><a href="php/techacademy.php">Tech Academy</a></li>
               </ul>
             </li>
-            <?php  session_start(); 
-            if($_SESSION['id_rol'] == 1){?>
+            <?php session_start();
+            if ($_SESSION['id_rol'] == 1) { ?>
               <li class="menu-has-children"><a href="">Administracion</a>
-              <ul>
-                <li><a href="php/agregarcurso.php">Agregar Curso</a></li>
-                <li><a href="php/roles.php">Administrar Roles</a></li>
-                <li><a href="php/estadisticas.php">Estadisticas</a></li>
-              </ul>
-            </li>
-            <?php }?> 
-            <?php if($_SESSION['id_rol'] == 2){?><li><a href="php/gestioncursos.php">Gestion de Curso</a></li><?php }?>
+                <ul>
+                  <li><a href="php/agregarcurso.php">Agregar Curso</a></li>
+                  <li><a href="php/roles.php">Administrar Roles</a></li>
+                  <li><a href="php/estadisticas.php">Estadisticas</a></li>
+                </ul>
+              </li>
+            <?php } ?>
+            <?php if ($_SESSION['id_rol'] == 2) { ?><li><a href="php/gestioncursos.php">Gestion de Curso</a></li><?php } ?>
             <li><a href="php/horario.php">Horario</a></li>
             <li><a href="php/sugerencia.php">Sugerencias</a></li>
-            <?php 
-              if(isset($_SESSION['nombre'])){?>
-                <li><a href="php/salirIndex.php">CERRAR SESSION</a></li>
-              <?php
-              }else{ ?>
-            <li class="dropdown ">
-              <!--  LOGIN MODAL TEST-->
-              <a href="">INICIAR SESION</a>
-              <div id="content-login" class="dropdown-content">
-                <h4>INICIAR SESION</h4>
-                <div class="form-group">
-                  <form action="php/autentificacion.php" method="POST">
-                    <div class="form-group my-2">
-                      <input type="text" name="user" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="  Cedula">
-                    </div>
-                    <div class="form-group my-2">
-                      <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="  Contraseña">
-                    </div>
-                    <button type="submit" class="btn btn-primary">INGRESAR</button>
-                  </form>
-                </div>
-              </div>
-            </li> 
-            <?php    
-            }?>    
+            <?php
+            if (isset($_SESSION['nombre'])) { ?>
+              <li><a href="php/salirIndex.php">CERRAR SESSION</a></li>
+            <?php
+            } else { ?>
+              <li><a href="php/login.php">CERRAR SESSION</a></li>
+            <?php } ?>
           </ul>
       </nav><!-- #nav-menu-container -->
     </div>

@@ -23,7 +23,7 @@ include '_header.php';
         Ver más información
         </button>
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong1">
-        INSCRIBIRSE
+        Pagar
         </button>
         <!-- Modal -->
         <div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
@@ -141,7 +141,7 @@ include '_header.php';
           
         </div>
           <!-- BOTON DE PAGO -->
-          <button type="buttons" class="btn btn-secondary">INSCRIBIRSE</button>
+          <button type="buttons" class="btn btn-secondary">PAGAR</button>
       </div>
     </div>
   </div>
@@ -167,7 +167,7 @@ include '_header.php';
         Ver más información
         </button>
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong2">
-        INSCRIBIRSE
+        Pagar
         </button>
         <!-- Modal -->
         <div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">

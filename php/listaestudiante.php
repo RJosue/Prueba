@@ -36,13 +36,10 @@ echo $idCurso;
     }
   </style>
   <br>
-
     <div class="alert alert-warning alert-dismissible" role="alert">
             <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
             Luego de haber culminado el curso debe se le habilitara el boton de Certificar, que automaticamente enviara el certificado en formato pdf a los correos registrados dentro del sistema segun los estudiantes seleccionados mediante el checkbox.
         </div>
-  <form action="../lib/certificado/certificar.php" method="post">
-  <input type="hidden" name="curso" value="<?php echo $idCurso ?>">
   <table class="table">
   <thead class="thead-dark">
       <tr>
@@ -86,26 +83,25 @@ echo $idCurso;
         <th>1</th>
         <td>Ernesto</td>
         <td>8-246-1234</td>
-        <td><input type="checkbox" name="estudiante[]" value="1"></td>
+        <td><input type="checkbox" name="estudiante[]"></td>
       </tr>
       <tr id="row_2">
         <th>2</th>
         <td>Chan</td>
         <td>8-246-1234</td>
-        <td><input type="checkbox" name="estudiante[]" value="1"></td>
+        <td><input type="checkbox" name="estudiante[]"></td>
       </tr>
       <tr id="row_3">
         <th>3</th>
         <td>Ernesto</td>
         <td>8-246-1234</td>
-        <td><input type="checkbox" name="estudiante[]" value="1"></td>
+        <td><input type="checkbox" name="estudiante[]"></td>
       </tr>
-    </tbody> -->
+    </tbody>
   </table>
-    <button type="submit" name="btnCertificar" class="btn btn-secondary float-right ml-1">Certificar Estudiantes</button>
-    <button type="submit" name="btnListar" class="btn btn-secondary float-right">Imprimir Lista</button>
+    <button class="btn btn-secondary float-right ml-1"><a href="../lib/certificado/certificar.php" target="_blank">Certificar Estudiantes</a></button>
+    <button class="btn btn-secondary float-right"><a href="">Imprimir Lista</a></button>
     <br>
-    </form>
   <script type='text/javascript'>
 
   // Set check or unchecked all checkboxes

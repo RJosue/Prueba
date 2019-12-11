@@ -1,7 +1,6 @@
 <?php
 $titulo = "Horario";
-include '_header.php';
-include 'validar.php'; 
+include '_header.php'; 
 ?>
 
 <div class="container">

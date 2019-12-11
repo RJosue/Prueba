@@ -4,6 +4,7 @@ include '_header.php';
 include 'validar.php';
 include 'conexion.php';
 ?>
+}
 
 <!------ Include the above in your HEAD tag ---------->
 
@@ -13,11 +14,12 @@ include 'conexion.php';
 	        Solo puedes votar una sola ves. Una ves has votado se desabilitara el boton de votar, solo podras ver los resultados. Se volvera a habilitar la opcion de votar apenas se empiece una nueva lista de votacion. Puedes realizar 3 sugerencias cada semestre.
 	    </div>
 		<div class="row">
-        <div class="col-sm-8">
+        <div class="col-8">
             <div class="panel panel-primary">
                 <div class="panel-heading">
                     <h3 class="panel-title">
-                        ¿Que otros cursos desearias que se dieran?
+                        <span class="glyphicon glyphicon-arrow-right"></span>¿Que otros cursos desearias que se dieran? <a href="http://www.jquery2dotnet.com" target="_blank"><span
+                            class="glyphicon glyphicon-new-window"></span></a>
                     </h3>
                 </div>
                 <form action="votar.php" method="POST">
@@ -49,10 +51,11 @@ include 'conexion.php';
             </form>
             </div>
         </div>
-        <div class="col-sm-4">
+        <div class="col-4">
         		<div class="panel-heading">
                     <h3 class="panel-title">
-                            ¡Sugiere un curso!
+                        <span class="glyphicon glyphicon-arrow-right"></span>¡Sugiere un curso!<a href="http://www.jquery2dotnet.com" target="_blank"><span
+                            class="glyphicon glyphicon-new-window"></span></a>
                     </h3>
                 </div>
                 <form action="sugerir.php" method="POST">

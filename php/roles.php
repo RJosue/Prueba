@@ -1,14 +1,13 @@
 <?php
 $titulo = "Administracion de Roles";
 include '_header.php'; 
-include 'validar.php';
 ?>
     <div class="container ">
     <!-- BARRA DE BUSQUEDA -->
         <nav class="navbar navbar-light bg-light mt-3">
             <form class="form-inline mx-auto">
-                <input class="form-control mr-sm-2" type="search" placeholder="Cedula" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+                <input class="form-control mr-sm-2" type="search" placeholder="Cedula" aria-label="Search" style="width:50%">
+                <button class="btn-outline-success my-2 my-sm-0" type="submit" style="border-radius:10px;width:25%;">Buscar</button>
             </form>
         </nav>
 
@@ -32,8 +31,7 @@ include 'validar.php';
         <td>Munguia</td>
         <td>8-954-585</td>
         <td> <div class="btn-group">
-  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Cambiar Rol
+  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width:100%">Cambiar Rol
   </button>
   <div class="dropdown-menu">
     <div class="dropdown-divider"></div>
