@@ -1,0 +1,20 @@
+html{
+    font-family: "Open Sans", sans-serif;
+}
+
+.card-img-overlay{
+    font-size: 1.2rem;
+    color: white; 
+    
+}
+ 
+h1 .card-img-overlay{
+    font-weight: bold;
+}
+
+.card-body1{
+    padding: 0.5rem;
+}
+
+
+ 

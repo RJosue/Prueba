@@ -1,0 +1,15 @@
+// Agregar algo, lo  q sea
+
+1. git add . //para agregar todos los archivos(para qe se vuelvan git)
+2. git commit -m "comentario" //Para meter el commit ocn comentario
+3. git push  //Para subirlo a la rama que estas parado.
+
+git config --global user.email"tu@email.com"
+git config --global user.name"tunombre"
+
+//Para jalarlo de la master
+
+1.git pull //para actualziar con lo del commit
+2. git merge origin/*rama* //para fusionar lo de la origin/*rama*,
+				Para traer lo de la master utilizar originar/master
+3. git push
