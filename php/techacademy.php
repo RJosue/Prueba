@@ -1,4 +1,4 @@
-<?php
+<?php session_start();
 $titulo = "Cursos de Tech Academy";
 include '_header.php';
 include 'conexion.php';

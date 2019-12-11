@@ -1,4 +1,4 @@
-<?php
+<?php 
 include 'conexion.php';
 $estado = $_POST["estado"];
 $id = $_POST["id"];

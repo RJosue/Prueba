@@ -1,4 +1,4 @@
-<?php
+<?php session_start();
 $titulo = "Lista de Estudiantes";
 include '_header.php';
 include 'conexion.php';

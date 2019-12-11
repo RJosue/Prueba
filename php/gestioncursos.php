@@ -1,4 +1,4 @@
-<?php
+<?php session_start();
 $titulo = "Gestion de Cursos";
 include '_header.php';
 include 'conexion.php';

@@ -1,4 +1,4 @@
-<?php 
+<?php session_start();
 include '_header.php';
 include 'conexion.php';
 include 'validar.php'; 

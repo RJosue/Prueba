@@ -1,5 +1,4 @@
-<?php
-session_start();
+<?php session_start();
 
 // Borra contenido de las sesiones
 unset ($SESSION['nombre']);

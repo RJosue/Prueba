@@ -1,4 +1,4 @@
-<?php
+<?php session_start();
 $titulo = "Votación";
 include '_header.php'; 
 include 'validar.php';

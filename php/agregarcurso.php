@@ -1,4 +1,4 @@
-<?php
+<?php session_start();
 $titulo = "Agregar Curso";
 include '_header.php';
 include 'validar.php';

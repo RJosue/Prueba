@@ -1,4 +1,4 @@
-<?php
+<?php session_start();
 $titulo = "Academia CISCO";
 include '_header.php';
 include 'conexion.php';

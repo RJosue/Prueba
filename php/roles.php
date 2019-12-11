@@ -1,4 +1,4 @@
-<?php
+<?php session_start();
 $titulo = "Administracion de Roles";
 include '_header.php';
 include 'conexion.php';

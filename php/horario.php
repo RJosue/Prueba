@@ -1,4 +1,4 @@
-<?php
+<?php session_start();
 $titulo = "Horario";
 include '_header.php';
 include 'validar.php'; 
