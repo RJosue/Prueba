@@ -17,65 +17,87 @@ while($row = $query1->fetch()){
 	switch($cont){
 		case 1:
 			echo '
-			<div class="container" style="margin-top: 5%;">
-			<div class="row">
-			  <div class="col-md">
-						<div class="card text-white bg-primary mb-3" style="max-width: 90%; width: 90%;">
-						   <div class="card-header" style="text-align: center; font-weight: bold;">'.$row["nombre"].'</div>
-								   <div class="card-body">
-									   <h5 class="card-title">Salon: '.$row["salon"].'</h5>
-									   <p class="card-text">Inicio: <br>'.$row["fechai"].' '.$row["horai"].'</p>
-									   <p class="card-text">Fin: <br>'.$row["fechaf"].''.$row["horaf"].'</p>
-								   </div>
-					  </div>
-			  </div>  ';
+			<div class="container-fluid">
+        		<div class="row">
+            		<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                		<div class="tile">
+                    		<div class="wrapper">
+                        		<div class="header" style="color:#FFFFFF;">'.$row["nombre"].'</div>
+                        		<div class="dates" style="marging: 1%;">
+                            		<div class="start" style="marging: 1%;">
+										<strong style="marging: 1%; color:#FFFFFF;">Inicio</strong style="color:#000000;">'.$row["horai"].' '.$row["fechai"].'
+										<span></span>
+                            		</div>
+									<div class="ends" style="marging: 1%;">
+										<strong style="marging: 1%; color:#FFFFFF;">Fin</strong>'.$row["horaf"].' '.$row["fechaf"].' 
+									</div>
+								</div>
+								<div style="marging: 1%; margin-botton: 5%; color:#FFFFFF;font-weight: bold;">Salon: '.$row["salon"].'</div>
+                    		</div>
+                		</div> 
+            		</div> ';
 		break;
 		case 2:
 			echo '
-			  <div class="col-md">
-						<div class="card text-white bg-primary mb-3" style="max-width: 90%; width: 90%;">
-						   <div class="card-header" style="text-align: center; font-weight: bold;">'.$row["nombre"].'</div>
-								   <div class="card-body">
-										<h5 class="card-title">Salon: '.$row["salon"].'</h5>
-										<p class="card-text">Inicio: <br>'.$row["fechai"].' '.$row["horai"].'</p>
-										<p class="card-text">Fin: <br>'.$row["fechaf"].''.$row["horaf"].'</p>
-								   </div>
-					  </div>
-			  </div>  ';
+					<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+					<div class="tile">
+						<div class="wrapper">
+							<div class="header" style="color:#FFFFFF;">'.$row["nombre"].'</div>
+							<div class="dates" style="marging: 1%;">
+								<div class="start" style="marging: 1%;">
+									<strong style="marging: 1%; color:#FFFFFF;">Inicio</strong style="color:#000000;">'.$row["horai"].' '.$row["fechai"].'
+									<span></span>
+								</div>
+								<div class="ends" style="marging: 1%;">
+									<strong style="marging: 1%; color:#FFFFFF;">Fin</strong>'.$row["horaf"].' '.$row["fechaf"].' 
+								</div>
+							</div>
+							<div style="marging: 1%; margin-botton: 5%; color:#FFFFFF;font-weight: bold;">Salon: '.$row["salon"].'</div>
+						</div>
+					</div> 
+				</div> ';
 		break;
 		case 3:
 			echo '
-			  <div class="col-md">
-						<div class="card text-white bg-primary mb-3" style="max-width: 90%; width: 90%;">
-						   <div class="card-header" style="text-align: center; font-weight: bold;">'.$row["nombre"].'</div>
-								   <div class="card-body">
-										<h5 class="card-title">Salon: '.$row["salon"].'</h5>
-										<p class="card-text">Inicio: <br>'.$row["fechai"].' '.$row["horai"].'</p>
-										<p class="card-text">Fin: <br>'.$row["fechaf"].''.$row["horaf"].'</p>
-								   </div>
-					  </div>
-			  </div>  
-			  </div> </div>';
+						<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+						<div class="tile">
+							<div class="wrapper">
+								<div class="header" style="color:#FFFFFF;">'.$row["nombre"].'</div>
+								<div class="dates" style="marging: 1%;">
+									<div class="start" style="marging: 1%;">
+										<strong style="marging: 1%; color:#FFFFFF;">Inicio</strong style="color:#000000;">'.$row["horai"].' '.$row["fechai"].'
+										<span></span>
+									</div>
+									<div class="ends" style="marging: 1%;">
+										<strong style="marging: 1%; color:#FFFFFF;">Fin</strong>'.$row["horaf"].' '.$row["fechaf"].' 
+									</div>
+								</div>
+								<div style="marging: 1%; margin-botton: 5%; color:#FFFFFF;font-weight: bold;">Salon: '.$row["salon"].'</div>
+							</div>
+						</div> 
+					</div> 
+				</div>
+			</div>';
 			$cont=0;
 		break;
 	}
 }
 if($cont==1){
 	echo '
-				<div class="col-md">
+				<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
 							
 				</div>
 			';
 
 	echo '
-	<div class="col-md">
+	<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
 	
 	</div>
 	';
 }
 else if ($cont==2){
 	echo '
-			<div class="col-md">
+			<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
     		
 			</div>
 			';
