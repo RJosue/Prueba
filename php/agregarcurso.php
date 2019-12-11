@@ -1,7 +1,8 @@
 <?php
 $titulo = "Agregar Curso";
 include '_header.php';
-include "Conexion.php";
+include 'validar.php';
+include "conexion.php";
 ?>
 <html>
 
@@ -198,7 +199,6 @@ $consultaCiscoClasificacioens->execute();
                         <div class=" col-sm-4">
                             <input type="datetime-local" class="form-control" id="11" name="fechaini[]" onchange="ValidacionFecha(11,21)" disabled required>
                         </div>
-                        <!-- <label class="control-label col-sm-2" for="correo">fecha de salida:</label> -->
                         <div class="col-sm-4">
                             <input type="datetime-local" class="form-control" id="21" name="fechafin[]" onchange="ValidacionFecha(11,21)" disabled required>
                         </div>
@@ -230,10 +230,8 @@ $consultaCiscoClasificacioens->execute();
                 </div>
                 <button type="submit" onclick="liberar()" class="btn btn-primary mx-3" style="width:250px; margin-right:60px; margin-buttom:25px;">Enviar</button>
         </form>
-
-        <h2>---------------------------</h2>
+            </div>
     </div>
-</body>
 <script>
     var num = 1;
     var xnum = 1;
@@ -454,8 +452,6 @@ $consultaCiscoClasificacioens->execute();
         $('#escsalon').removeAttr("disabled");
     }
 </script>
-
-</html>
 <?php
 include '_footer.php';
 ?>

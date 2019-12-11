@@ -1,6 +1,29 @@
 <?php
 $titulo = "Lista de Estudiantes";
 include '_header.php'; 
+<<<<<<< HEAD
+=======
+include 'conexion.php';
+include 'validar.php';
+
+$idDelCurso = $_GET['idCurso'];
+ // Store the cipher method 
+ $ciphering = "AES-256-CTR"; 
+$options = 0;
+ // Use OpenSSl Encryption method 
+ $iv_length = openssl_cipher_iv_length($ciphering); 
+$decryption_iv = '0234789057295120'; 
+  
+// Store the decryption key 
+$decryption_key = ",flmk.dnf2!#%/."; 
+  
+// Use openssl_decrypt() function to decrypt the data 
+$idCurso= openssl_decrypt ($idDelCurso, $ciphering, $decryption_key, $options, $decryption_iv); 
+        
+echo $idCurso;
+// select u.id, u.nombre, u.apellido, u.cedula from usuarios u inner join usuarios_capacitaciones uc on u.id = id_usuario inner join capacitaciones c on c.id = uc.id_capacitacion where uc.id_capacitacion = 5;
+
+>>>>>>> origin/ChanBranch
 ?>
 <div class="container shadow">
   <style type="text/css">
@@ -21,7 +44,36 @@ include '_header.php';
             Luego de haber culminado el curso debe se le habilitara el boton de Certificar, que automaticamente enviara el certificado en formato pdf a los correos registrados dentro del sistema segun los estudiantes seleccionados mediante el checkbox.
         </div>
   <table class="table">
-    <thead class="thead-dark">
+  <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nombre del Estudiante</th>
+        <th scope="col">Cedula</th>
+        <th scope="col"><input type="checkbox" name="estudiante" onchange="checkAll(this)"></th>
+      </tr>
+    </thead>
+  <?php 
+    				$stmt = $conexion->prepare("select u.id, u.nombre, u.apellido, u.cedula from usuarios u inner join usuarios_capacitaciones uc on u.id = id_usuario inner join capacitaciones c on c.id = uc.id_capacitacion where uc.id_capacitacion = ? and c.id_profesor = ?;
+            ");
+            $stmt->execute([$idCurso,$_SESSION['id']]); 
+            $est = $stmt->fetchAll();
+            $cont = 1;
+            foreach ($est as $row) {
+                // echo $row['nombre']." ".$row['apellido'];
+                ?>
+                <tbody>
+                <tr>
+                  <th><?php echo $cont; ?></th>
+                  <td><?php echo $row['nombre']." ".$row['apellido']; ?></td>
+                  <td><?php echo $row['cedula']; ?></td>
+                  <td><input type="checkbox" name="estudiante[]" value="<?php echo $row['id']; ?>"></td>
+                </tr>
+              </tbody>
+                <?php
+                $cont++;
+              }
+  ?>
+    <!-- <thead class="thead-dark">
       <tr>
         <th scope="col">#</th>
         <th scope="col">Nombre del Estudiante</th>
