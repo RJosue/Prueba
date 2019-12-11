@@ -43,7 +43,7 @@ $contClasificacionCisco = $totalClasificacionCisco - $totalClasificacionCisco;
                         <ul>
                             <li><p class="card-text pl-1">Conocimientos básicos de computación y redes de computadoras.</p></li>
                             <li><p class="card-text pl-1">Experiencia en el uso de navegadores de Internet.</p></li>
-                            <li><p class="card-text pl-1">TIngles Científico.</p></li>                    
+                            <li><p class="card-text pl-1">Ingles Científico.</p></li>                    
                         </ul>
                         <h5 class="lead"><strong>Duración</strong></h5>
                         <p>Los módulos tienen una duración de 9 semanas.</p>
@@ -83,7 +83,7 @@ $contClasificacionCisco = $totalClasificacionCisco - $totalClasificacionCisco;
                     <img src="../img/<?php echo $resultados["foto"] ?>" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title"><?php echo $resultados["clasificacion"]?></h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, repellat animi. Fugit, ratione! Consequatur vero distinctio libero perspiciatis accusamus. </p>
+                        <p class="card-text"><?php echo $resultados["descripcion"] ?></p>
                     </div>      
                     <ul class="list-group list-group-flush">
                     <?php

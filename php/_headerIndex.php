@@ -62,7 +62,7 @@
               <li><a href="php/salirIndex.php">CERRAR SESSION</a></li>
             <?php
             } else { ?>
-              <li><a href="login.php">INICIAR SESSION</a></li>
+              <li><a href="php/login.php">INICIAR SESSION</a></li>
             <?php
             } ?>
       </nav><!-- #nav-menu-container -->
